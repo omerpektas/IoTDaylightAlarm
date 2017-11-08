@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This is defines a button when clicked -->
+    <item android:drawable="@drawable/eps1"
+          android:state_pressed="true" />
+    <!-- This is defines button when focused -->
+    <item android:drawable="@drawable/eps1"
+          android:state_pressed="true"/>
+
+    <!-- This is define a button when clicked -->
+    <item android:drawable="@drawable/eps1"/>
+</selector>

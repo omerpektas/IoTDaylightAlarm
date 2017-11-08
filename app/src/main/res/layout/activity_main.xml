@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context="com.example.myestein.iotdaylightalarm.MainActivity">
+
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:onClick="setDate"
+        android:layout_below="@+id/Alarmtimetext"
+        android:layout_alignStart="@+id/textView2"/>
+
+    <Button
+        android:id="@+id/time"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:layout_below="@+id/Alarmtimetext"
+        android:layout_alignStart="@+id/AlarmReset"/>
+
+    <TextView
+        android:id="@+id/Alarmtimetext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="    Set Alarm Time and Date"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="Date: "
+        android:id="@+id/DateView"
+        android:layout_below="@+id/date"
+        android:layout_alignStart="@+id/date"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="Time: "
+        android:id="@+id/TimeView"
+        android:layout_below="@+id/time"
+        android:layout_alignStart="@+id/time"/>
+
+    <TextView
+        android:id="@+id/FunctionText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/DateView"
+        android:text="    Choose Enlightenment Function"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:id="@+id/f1"
+            android:layout_below="@+id/FunctionText"
+            android:layout_toStartOf="@+id/textView4"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/function_1"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="F1:"
+            android:textSize="23dp"
+            android:id="@+id/textView2"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_toStartOf="@+id/f1"/>
+
+        <ImageButton
+            android:id="@+id/f2"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/function_2"
+            android:layout_below="@+id/FunctionText"
+            android:layout_toEndOf="@+id/textView4"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:text="F3:"
+            android:textSize="23dp"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/f1"
+            android:layout_toStartOf="@+id/f3"/>
+
+        <ImageButton
+            android:id="@+id/f3"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/function_3"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_toEndOf="@+id/textView2"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="F2:"
+            android:textSize="23dp"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/FunctionText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:id="@+id/f4"
+            android:background="@drawable/function_4"
+            android:layout_alignTop="@+id/textView"
+            android:layout_toEndOf="@+id/textView4"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="F4:"
+            android:textSize="23dp"
+            android:id="@+id/textView"
+            android:layout_alignTop="@+id/f3"
+            android:layout_toEndOf="@+id/f1"/>
+
+
+    <TextView
+        android:id="@+id/EnlightenmentTimeText"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:text="                 The Englightenment Time"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/f4"
+        android:layout_alignStart="@+id/EnlightenmentTime"/>
+    <NumberPicker
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/EnlightenmentTime"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="180dp">
+
+    </NumberPicker>
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="260dp"
+        android:text="Set"
+        android:id="@+id/setTime"/>
+
+    <Switch
+        android:id="@+id/music"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text=" Music On / Off"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/EnlightenmentTimeText"
+        android:layout_alignStart="@+id/AlarmSet">
+    </Switch>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginStart="20dp"
+        android:text="Alarm Set"
+        android:id="@+id/AlarmSet"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginStart="200dp"
+        android:text="Alarm Reset"
+        android:id="@+id/AlarmReset"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="470dp"
+        android:text="     Alarm Set to: "
+        android:textSize="18dp"
+        android:id="@+id/AlarmSetText"/>
+</RelativeLayout>
+
